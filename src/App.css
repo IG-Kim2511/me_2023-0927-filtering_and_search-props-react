@@ -11,7 +11,7 @@ nav {
 }
 
 /* input search bar css  */
-input {
+/* input {
   padding: 12px 20px;
   border: none;
   background: #f7f6f6;
@@ -20,7 +20,7 @@ input {
   border-radius: 5px;
   position: relative;
   width: 14rem;
-}
+} */
 
 .nav-icons {
   width: 1.5rem;

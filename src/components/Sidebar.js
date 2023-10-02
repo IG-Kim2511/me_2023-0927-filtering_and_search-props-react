@@ -10,7 +10,7 @@ const Sidebar = ({handleChange}) => {
     input value onChange한때 handleChange function 실행
   */
 
-    const categoryObj  = [
+  const category_Obj  = [
       {
         value: "Sneakers",
         title: "Sneakers",
@@ -33,6 +33,29 @@ const Sidebar = ({handleChange}) => {
       }
   ];
 
+  const price_Obj  = [
+      {
+        value: 50,
+        title: "$0 - 50",
+        name : "test",
+      },
+      {
+        value: 100,
+        title: "Flats",
+        name : "test",
+      },
+      {
+        value: 150,
+        title: "$100 - $150",
+        name : "test",
+      },
+      {
+        value: 200,
+        title: "Over $150",
+        name : "test",
+      }
+  ];
+
 
   return (
     <div id='Sidebar'>
@@ -42,14 +65,14 @@ const Sidebar = ({handleChange}) => {
 
       {/* ----Category ---- */}
       <main id="Category">
-        <h2 className="sidebar-title">Category</h2>
-        <div>
-          <label htmlFor="" className='sidebar-label-container'>
-            <input type="text" />
-            <span></span>all
-          </label>        
+        <h2 className="sidebar-title">Category</h2>    
+        <div>         
+          <label className="sidebar-label-container">
+            <input onChange={handleChange} type="radio" value="" name="test" />
+            <span className="checkmark"></span>All
+          </label>     
           {
-            categoryObj.map((i)=>(
+            category_Obj.map((i)=>(
               <label className="sidebar-label-container">
                 <input onChange={handleChange} type="radio" value={i.value} name={i.name} />
                 <span className="checkmark" ></span>
@@ -60,7 +83,27 @@ const Sidebar = ({handleChange}) => {
         </div>
       
       </main>
-    
+
+      {/* --- Price --- */}
+      <main className="Price">
+        <div className="ml">
+         <h2 className="sidebar-title price-title">Price</h2>
+         <label className="sidebar-label-container">
+          <input onChange={handleChange} type="radio" value="" name="test2" />
+          <span className="checkmark"></span>All
+         </label>
+         {
+          price_Obj.map((i)=>(
+            <label className="sidebar-label-container">
+              <input onChange={handleChange} type="radio" value={i.value} name={i.name} />
+              <span className="checkmark" ></span>
+              {i.title}
+            </label>
+          ))
+         } 
+
+        </div>      
+      </main>
     
     </div>
   )
