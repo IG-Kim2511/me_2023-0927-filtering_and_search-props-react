@@ -1,10 +1,12 @@
 import React from 'react'
+import "./Nav.css"
+
 import { FiHeart } from "react-icons/fi";
 import { AiOutlineShoppingCart, AiOutlineUserAdd } from "react-icons/ai";
 
 const Nav = ({handleInputChange,query}) => {
   return (
-    <div>
+    <div id='nav'>
         <section className="nav-container">
             <input type="text" className='search-input' onChange={handleInputChange}
             value={query}

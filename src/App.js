@@ -1,27 +1,27 @@
 import React, { useState } from 'react';
 import './App.css';
 import Nav from './components/Nav';
+import Sidebar from './components/Sidebar';
 
 const App = () => {
   const [query, setQuery] = useState('');
+
+  const [selectedCategory, setSelectedCategory] = useState(null)
 
   const handleInputChange = (e) => {
     setQuery(e.target.value);
   };
 
-  const handleSubmit = () => {
-    // Do something with the query, e.g., send it to an API
-    console.log(query);
-  };
+  const handleChange =(e)=>{
+    setSelectedCategory(e.target.value);   
+  }
+
 
   return (
     <div>
-      <h1>App</h1>
-      <input type="text" onChange={handleInputChange} value={query} />
-      <button onClick={handleSubmit}>Submit</button>
       <div>Query: {query}</div>
-
       <Nav query={query} handleInputChange={handleInputChange} />
+      <Sidebar handleChange={handleChange}/>
     </div>
   );
 };
