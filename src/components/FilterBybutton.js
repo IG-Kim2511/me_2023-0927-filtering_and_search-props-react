@@ -5,7 +5,7 @@ const FilterBybutton = ({handleClick}) => {
 
     const Btn_Obj  = [
         {
-          value: "",      
+          value: "All Products",      
         },
         {
           value: "Nike",      
@@ -18,15 +18,13 @@ const FilterBybutton = ({handleClick}) => {
         },
         {
           value: "Vans",      
-        },
- 
+        }, 
     ];
     
   return (
     <div id='FilterBybutton'>
         <h2>FilterBybutton</h2>        
         <div className="FilterBybutton-flex">
-
         {
             Btn_Obj.map((item, i) => (
             <button onClick={handleClick} value={item.value} className='btns' key={i}>
@@ -34,16 +32,9 @@ const FilterBybutton = ({handleClick}) => {
             </button>
           ))
         }
-     
-        
         </div>   
     </div>
   )
 }
 
 export default FilterBybutton
-
-
-// <button onClick={onClickHandler} value={value} className="btns">
-// {title}
-// </button>
