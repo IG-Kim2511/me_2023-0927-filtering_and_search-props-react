@@ -9,7 +9,7 @@ import data_products from './data';
 const App = () => {
 
   // 👉105
-  const [selectedCategory, setSelectedCategory] = useState(null)
+  const [selected, setSelected] = useState(null)
 
   // ----------- Input Filter -----------  
   //🍀js 100  query : nav input search bar에서의 value
@@ -24,14 +24,14 @@ const App = () => {
   
   // 🍀js 105 ------ Radio Filtering -----------
   const handleSelectedChange =(e)=>{
-    setSelectedCategory(e.target.value);   
+    setSelected(e.target.value);   
     console.log("handleSelectedChange")
 
   }
 
   // ------------ Button Filtering -----------
   const handleSelectedClick =(e)=>{
-    setSelectedCategory(e.target.value);
+    setSelected(e.target.value);
     console.log("handleSelectedClick")
   }
 
@@ -55,9 +55,21 @@ const App = () => {
   const filteredData=(data_products, selected, query)=>{
     console.log(data_products)
 
+    let filtered_Products = data_products;  
+
+    // Filtering Input Items
+    if (query) {
+      
+    }
+    if (selected) {
+      
+    }
+
+
+
   }
 
-  const result = filteredData(data_products, selectedCategory, query);
+  const result = filteredData(data_products, selected, query);
 
 
   return (
