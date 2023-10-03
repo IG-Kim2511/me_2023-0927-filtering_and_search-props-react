@@ -3,9 +3,8 @@ import './App.css';
 import Nav from './components/Nav';
 import Sidebar from './components/Sidebar';
 import FilterBybutton from './components/FilterBybutton';
-import Products from './components/Products';
+
 import data_products from './data';
-import Card from './components/Card';
 
 const App = () => {
 
