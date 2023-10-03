@@ -95,28 +95,28 @@ const App = () => {
               </div>
             </section>
           </div>
-    </section>
-
+        </section>
     ))
-
-
-
   }
 
   const result = filteredData(data_products, selected, query);
-
 
   return (
     <div>
       <div>Query: {query}</div>
       <Nav query={query} handleQueryChange={handleQueryChange} />
-      <FilterBybutton handleSelectedClick={handleSelectedClick}/>
-      <Sidebar handleSelectedChange={handleSelectedChange}/>
-
-      {/*👉js 0223 */}
-      <Products result={result} />
-  
-
+      <main className="container">
+        <div className="left">
+          <FilterBybutton handleSelectedClick={handleSelectedClick}/>
+          <Sidebar handleSelectedChange={handleSelectedChange}/>
+        </div>
+        <div className="right">      
+          {/*👉js 0223 */}      
+          <div className='Products'>
+          {result} 
+          </div>
+        </div> 
+      </main>
     </div>
   );
 };
