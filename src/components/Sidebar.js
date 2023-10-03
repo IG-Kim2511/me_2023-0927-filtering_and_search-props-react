@@ -1,7 +1,7 @@
 import React from 'react'
 import "./Sidebar.css"
 
-const Sidebar = ({handleChange}) => {
+const Sidebar = ({handleSelectedChange}) => {
 
   /* 🦄
     console-handleChange 찍어보면 setSelectedCategory 가 나옴... 
@@ -68,13 +68,13 @@ const Sidebar = ({handleChange}) => {
         <h2 className="sidebar-title">Category</h2>    
         <div>         
           <label className="sidebar-label-container">
-            <input onChange={handleChange} type="radio" value="" name="test" />
+            <input onChange={handleSelectedChange} type="radio" value="" name="test" />
             <span className="checkmark"></span>All
           </label>     
           {
             category_Obj.map((i)=>(
               <label className="sidebar-label-container">
-                <input onChange={handleChange} type="radio" value={i.value} name={i.name} />
+                <input onChange={handleSelectedChange} type="radio" value={i.value} name={i.name} />
                 <span className="checkmark" ></span>
                 {i.title}
               </label>
@@ -89,13 +89,13 @@ const Sidebar = ({handleChange}) => {
         <div className="ml">
          <h2 className="sidebar-title price-title">Price</h2>
          <label className="sidebar-label-container">
-          <input onChange={handleChange} type="radio" value="" name="test2" />
+          <input onChange={handleSelectedChange} type="radio" value="" name="test2" />
           <span className="checkmark"></span>All
          </label>
          {
           price_Obj.map((i)=>(
             <label className="sidebar-label-container">
-              <input onChange={handleChange} type="radio" value={i.value} name={i.name} />
+              <input onChange={handleSelectedChange} type="radio" value={i.value} name={i.name} />
               <span className="checkmark" ></span>
               {i.title}
             </label>

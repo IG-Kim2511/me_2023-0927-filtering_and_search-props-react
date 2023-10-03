@@ -1,7 +1,7 @@
 import React from 'react'
 import "./FilterBybutton.css"
 
-const FilterBybutton = ({handleClick}) => {
+const FilterBybutton = ({handleSelectedClick}) => {
 
     const Btn_Obj  = [
         {
@@ -27,7 +27,7 @@ const FilterBybutton = ({handleClick}) => {
         <div className="FilterBybutton-flex">
         {
             Btn_Obj.map((item, i) => (
-            <button onClick={handleClick} value={item.value} className='btns' key={i}>
+            <button onClick={handleSelectedClick} value={item.value} className='btns' key={i}>
               {item.value}
             </button>
           ))

@@ -4,11 +4,11 @@ import "./Nav.css"
 import { FiHeart } from "react-icons/fi";
 import { AiOutlineShoppingCart, AiOutlineUserAdd } from "react-icons/ai";
 
-const Nav = ({handleInputChange,query}) => {
+const Nav = ({handleQueryChange,query}) => {
   return (
     <div id='nav'>
         <section className="nav-container">
-            <input type="text" className='search-input' onChange={handleInputChange}
+            <input type="text" className='search-input' onChange={handleQueryChange}
             value={query}
             placeholder='nav input'/>
         </section>

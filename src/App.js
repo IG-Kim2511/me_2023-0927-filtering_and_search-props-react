@@ -14,18 +14,18 @@ const App = () => {
   const [query, setQuery] = useState('');
 
   // 👉js 100
-  const handleInputChange = (e) => {
+  const handleQueryChange = (e) => {
     setQuery(e.target.value);
   };
 
   
   // 🍀js 105 ------ Radio Filtering -----------
-  const handleChange =(e)=>{
+  const handleSelectedChange =(e)=>{
     setSelectedCategory(e.target.value);   
   }
 
   // ------------ Button Filtering -----------
-  const handleClick =(e)=>{
+  const handleSelectedClick =(e)=>{
     setSelectedCategory(e.target.value);
   }
 
@@ -33,12 +33,11 @@ const App = () => {
   return (
     <div>
       <div>Query: {query}</div>
-      <Nav query={query} handleInputChange={handleInputChange} />
-      <Sidebar handleChange={handleChange}/>
+      <Nav query={query} handleQueryChange={handleQueryChange} />
+      <Sidebar handleSelectedChange={handleSelectedChange}/>
 
-      <FilterBybutton handleClick={handleClick}/>
+      <FilterBybutton handleSelectedClick={handleSelectedClick}/>
       {/* 🎃  
-      <Recommended handleClick={handleClick} />
       <Products result={result} />
      */}
 
