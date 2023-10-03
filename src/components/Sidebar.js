@@ -63,9 +63,9 @@ const Sidebar = ({handleSelectedChange}) => {
         <h1>🛒</h1>
       </main>
 
-      {/* ----Category ---- */}
-      <main id="Category">
-        <h2 className="sidebar-title">Category</h2>    
+      {/* ----Sidebar ---- */}
+      <main className="container">
+        <h2 className="sidebar-title">Sidebar</h2>    
         <div>         
           <label className="sidebar-label-container">
             <input onChange={handleSelectedChange} type="radio" value="" name="test" />

@@ -18,9 +18,9 @@
   }
   
 
-  /*  ----Category ----  */
+  /*  ----Sidebar ----  */
 
- #Category .sidebar-title {
+ #Sidebar .container .sidebar-title {
     font-size: 22px;
     font-weight: normal;
     margin-bottom: 20px;
