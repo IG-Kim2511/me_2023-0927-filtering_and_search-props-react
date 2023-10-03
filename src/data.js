@@ -5,7 +5,7 @@ icon : react-icons library "npm install react-icons --save"
 
 import { AiFillStar } from "react-icons/ai";
 
-const data = [
+const data_products = [
   {
     img: "https://m.media-amazon.com/images/I/6125yAfsJKL._AC_UX575_.jpg",
     title: "Nike Air Monarch IV",
@@ -323,4 +323,4 @@ const data = [
   },
 ];
 
-export default data;
+export default data_products;
